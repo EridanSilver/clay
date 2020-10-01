@@ -1,4 +1,4 @@
-module github.com/EridanSilver/clay/v2
+module github.com/utrack/clay/v2
 
 require (
 	github.com/go-chi/chi v3.3.4+incompatible
