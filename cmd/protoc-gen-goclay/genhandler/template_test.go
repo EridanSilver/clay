@@ -4,13 +4,14 @@ import "testing"
 
 func Test_goTypeName(t *testing.T) {
 	tests := []struct {
-		in string
+		in   string
 		want string
 	}{
 		{"test", "Test"},
 		{"testVar", "TestVar"},
 		{"test.testVar", "test.TestVar"},
 		{"test.testVar.nestedVar", "test.TestVar.NestedVar"},
+		{"test.test_var.nested_var", "test.TestVar.NestedVar"},
 	}
 	for _, tc := range tests {
 		if got := goTypeName(tc.in); got != tc.want {

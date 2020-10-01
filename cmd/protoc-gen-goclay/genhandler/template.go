@@ -8,9 +8,9 @@ import (
 	"text/template"
 
 	pbdescriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
-	"github.com/golang/protobuf/protoc-gen-go/generator"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 	"github.com/grpc-ecosystem/grpc-gateway/utilities"
+	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
 	"github.com/utrack/clay/v2/cmd/protoc-gen-goclay/internal"
 )
@@ -106,7 +106,7 @@ func goTypeName(s string) string {
 		i = 1
 	}
 	for pos := range toks[i:] {
-		toks[pos+i] = generator.CamelCase(toks[pos+i])
+		toks[pos+i] = strcase.ToCamel(toks[pos+i])
 	}
 	return strings.Join(toks, ".")
 }

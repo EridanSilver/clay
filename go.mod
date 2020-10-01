@@ -11,6 +11,7 @@ require (
 	github.com/golang/protobuf v1.3.2
 	github.com/grpc-ecosystem/go-grpc-middleware v1.1.0
 	github.com/grpc-ecosystem/grpc-gateway v1.14.2
+	github.com/iancoleman/strcase v0.1.2
 	github.com/peterbourgon/mergemap v0.0.0-20130613134717-e21c03b7a721
 	github.com/pkg/errors v0.8.1
 	github.com/soheilhy/cmux v0.1.4
