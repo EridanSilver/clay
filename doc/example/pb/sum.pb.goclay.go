@@ -4,7 +4,7 @@
 /*
 Package sumpb is a self-registering gRPC and JSON+Swagger service definition.
 
-It conforms to the github.com/utrack/clay/v2/transport Service interface.
+It conforms to the github.com/EridanSilver/clay/v2/transport Service interface.
 */
 package sumpb
 
@@ -18,17 +18,17 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/EridanSilver/clay/v2/transport"
+	"github.com/EridanSilver/clay/v2/transport/httpclient"
+	"github.com/EridanSilver/clay/v2/transport/httpruntime"
+	"github.com/EridanSilver/clay/v2/transport/httpruntime/httpmw"
+	"github.com/EridanSilver/clay/v2/transport/httptransport"
+	"github.com/EridanSilver/clay/v2/transport/swagger"
 	"github.com/go-chi/chi"
 	"github.com/go-openapi/spec"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/grpc-ecosystem/grpc-gateway/utilities"
 	"github.com/pkg/errors"
-	"github.com/utrack/clay/v2/transport"
-	"github.com/utrack/clay/v2/transport/httpclient"
-	"github.com/utrack/clay/v2/transport/httpruntime"
-	"github.com/utrack/clay/v2/transport/httpruntime/httpmw"
-	"github.com/utrack/clay/v2/transport/httptransport"
-	"github.com/utrack/clay/v2/transport/swagger"
 	"google.golang.org/grpc"
 )
 

@@ -14,11 +14,11 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/EridanSilver/clay/v2/cmd/protoc-gen-goclay/internal"
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/proto"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
-	"github.com/utrack/clay/v2/cmd/protoc-gen-goclay/internal"
 	"google.golang.org/genproto/googleapis/api/annotations"
 )
 
@@ -301,15 +301,15 @@ func (g *Generator) getDescTemplate(swagger []byte, f *descriptor.File) (string,
 		"encoding/base64",
 		"context",
 
-		"github.com/utrack/clay/v2/transport/httpruntime",
-		"github.com/utrack/clay/v2/transport/httptransport",
-		"github.com/utrack/clay/v2/transport/swagger",
+		"github.com/EridanSilver/clay/v2/transport/httpruntime",
+		"github.com/EridanSilver/clay/v2/transport/httptransport",
+		"github.com/EridanSilver/clay/v2/transport/swagger",
 		"github.com/grpc-ecosystem/grpc-gateway/runtime",
 		"github.com/grpc-ecosystem/grpc-gateway/utilities",
 		"google.golang.org/grpc",
 		"github.com/go-chi/chi",
 		"github.com/pkg/errors",
-		"github.com/utrack/clay/v2/transport",
+		"github.com/EridanSilver/clay/v2/transport",
 	}
 
 	if swagger != nil {
@@ -321,8 +321,8 @@ func (g *Generator) getDescTemplate(swagger []byte, f *descriptor.File) (string,
 		imports = append(imports, g.newGoPackage(pkg))
 	}
 
-	httpmw := g.newGoPackage("github.com/utrack/clay/v2/transport/httpruntime/httpmw")
-	httpcli := g.newGoPackage("github.com/utrack/clay/v2/transport/httpclient")
+	httpmw := g.newGoPackage("github.com/EridanSilver/clay/v2/transport/httpruntime/httpmw")
+	httpcli := g.newGoPackage("github.com/EridanSilver/clay/v2/transport/httpclient")
 	for _, svc := range f.Services {
 		for _, m := range svc.Methods {
 			checkedAppend := func(pkg descriptor.GoPackage) {
@@ -377,7 +377,7 @@ func (g *Generator) getServiceImpl(f *descriptor.File, s *descriptor.Service) (s
 	defer func() {
 		f.GoPkg = savedPkg
 	}()
-	return applyImplTemplate(g.getImplParam(f, s, nil, []string{"github.com/utrack/clay/v2/transport"}))
+	return applyImplTemplate(g.getImplParam(f, s, nil, []string{"github.com/EridanSilver/clay/v2/transport"}))
 }
 
 func (g *Generator) getMethodImpl(s *descriptor.Service, m *descriptor.Method) (string, error) {

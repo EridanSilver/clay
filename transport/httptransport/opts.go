@@ -1,8 +1,8 @@
 package httptransport
 
 import (
+	"github.com/EridanSilver/clay/v2/transport/swagger"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
-	"github.com/utrack/clay/v2/transport/swagger"
 	"google.golang.org/grpc"
 )
 

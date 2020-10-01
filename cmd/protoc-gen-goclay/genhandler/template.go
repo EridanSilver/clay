@@ -7,12 +7,12 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/EridanSilver/clay/v2/cmd/protoc-gen-goclay/internal"
 	pbdescriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 	"github.com/grpc-ecosystem/grpc-gateway/utilities"
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
-	"github.com/utrack/clay/v2/cmd/protoc-gen-goclay/internal"
 )
 
 const (
@@ -335,7 +335,7 @@ var (
 /*
 Package {{ .GoPkg.Name }} is a self-registering gRPC and JSON+Swagger service definition.
 
-It conforms to the github.com/utrack/clay/v2/transport Service interface.
+It conforms to the github.com/EridanSilver/clay/v2/transport Service interface.
 */
 package {{ .GoPkg.Name }}
 import (

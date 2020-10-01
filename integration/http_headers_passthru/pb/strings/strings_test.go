@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/EridanSilver/clay/v2/transport"
 	"github.com/stretchr/testify/assert"
-	"github.com/utrack/clay/v2/transport"
 	"google.golang.org/grpc/metadata"
 )
 

@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"context"
+	"github.com/EridanSilver/clay/v2/transport"
 	"github.com/stretchr/testify/assert"
-	"github.com/utrack/clay/v2/transport"
 	"net/http"
 	"net/http/httptest"
 )

@@ -30,7 +30,7 @@ NC=:\033[0m
 
 protoc-build:
 	$(info #Installing binary dependencies...)
-	GOBIN=$(LOCAL_BIN) go install github.com/utrack/clay/v2/cmd/protoc-gen-goclay
+	GOBIN=$(LOCAL_BIN) go install github.com/EridanSilver/clay/v2/cmd/protoc-gen-goclay
 	GOBIN=$(LOCAL_BIN) go install github.com/golang/protobuf/protoc-gen-go
 	GOBIN=$(LOCAL_BIN) go install github.com/gogo/protobuf/protoc-gen-gofast
 	GOBIN=$(LOCAL_BIN) go install github.com/gogo/protobuf/protoc-gen-gogofast

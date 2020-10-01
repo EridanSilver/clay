@@ -8,11 +8,11 @@ import (
 	"github.com/rakyll/statik/fs"
 	"github.com/sirupsen/logrus"
 
+	"github.com/EridanSilver/clay/v2/log"
+	"github.com/EridanSilver/clay/v2/transport"
+	"github.com/EridanSilver/clay/v2/transport/middlewares/mwgrpc"
+	"github.com/EridanSilver/clay/v2/transport/server"
 	pb "github.com/utrack/clay/doc/example/pb"
-	"github.com/utrack/clay/v2/log"
-	"github.com/utrack/clay/v2/transport"
-	"github.com/utrack/clay/v2/transport/middlewares/mwgrpc"
-	"github.com/utrack/clay/v2/transport/server"
 	"golang.org/x/net/context"
 
 	// We're using statik-compiled files of Swagger UI
